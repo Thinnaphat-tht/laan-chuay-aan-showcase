@@ -1,0 +1,27 @@
+name: บอตอ่านผิด / ตอบผิด
+description: สรุปผิด นับวันผิด หรือเตือนมิจฉาชีพไม่ตรง
+title: "[อ่านผิด] "
+body:
+  - type: markdown
+    attributes:
+      value: "⚠️ ห้ามแนบรูปจดหมายจริงที่มีชื่อ ที่อยู่ เลขบัตร หรือเลขบัญชี ให้เล่าเป็นข้อความแทน"
+  - type: dropdown
+    id: kind
+    attributes:
+      label: ผิดตรงไหน
+      options: ["บอกประเภทจดหมายผิด", "บอกสิ่งที่ต้องทำผิด", "วันที่หรือจำนวนวันผิด", "จำนวนเงินผิด", "เตือนมิจฉาชีพผิด (เตือนเกินหรือไม่เตือน)", "อื่น ๆ"]
+    validations:
+      required: true
+  - type: textarea
+    id: letter
+    attributes:
+      label: จดหมายเป็นแบบไหน
+      description: เช่น ใบแจ้งค่าไฟ, จดหมายอ้างว่ามาจากกรมสรรพากร
+    validations:
+      required: true
+  - type: textarea
+    id: reply
+    attributes:
+      label: บอตตอบว่าอะไร และที่ถูกควรเป็นอะไร
+    validations:
+      required: true

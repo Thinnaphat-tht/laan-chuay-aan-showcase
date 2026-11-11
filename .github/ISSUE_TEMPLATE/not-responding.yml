@@ -1,0 +1,22 @@
+name: บอตไม่ตอบ / ตอบช้า
+description: ส่งรูปไปแล้วเงียบ ตอบช้ามาก หรือขึ้นว่าอ่านไม่สำเร็จ
+title: "[ไม่ตอบ] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: อาการ
+      options: ["ไม่ตอบเลย", "ตอบช้ามาก (เกิน 1 นาที)", "ขึ้นว่าอ่านรูปไม่สำเร็จ", "อื่น ๆ"]
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: วันและเวลาที่ส่ง
+      placeholder: เช่น 12 พ.ย. 2569 ประมาณ 23:10
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: รายละเอียดเพิ่มเติม
